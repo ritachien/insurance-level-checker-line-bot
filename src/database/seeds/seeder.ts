@@ -2,9 +2,9 @@ import { sequelize } from '../../config/sequelize.config'
 import { logger } from '../../utils/logger'
 
 // import models
-import { LaborLevel } from '../models/LaborLevel'
-import { RetireFundLevel } from '../models/RetireFundLevel'
-import { HealthLevel } from '../models/HealthLevel'
+import { LaborLevel } from '../models/laborLevel.model'
+import { RetireFundLevel } from '../models/retireFundLevel.model'
+import { HealthLevel } from '../models/healthLevel.model'
 
 // import seeds
 import {

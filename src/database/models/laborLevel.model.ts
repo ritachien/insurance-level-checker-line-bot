@@ -1,12 +1,12 @@
 import { Table, Column, Model, AllowNull, PrimaryKey, HasMany } from 'sequelize-typescript'
-import { HealthLevel } from './HealthLevel'
+import { HealthLevel } from './healthLevel.model'
 
 @Table({
-  tableName: 'retireFundLevels',
+  tableName: 'laborLevels',
   timestamps: false
 })
 
-export class RetireFundLevel extends Model {
+export class LaborLevel extends Model {
   @PrimaryKey
   @AllowNull(false)
   @Column
@@ -14,8 +14,8 @@ export class RetireFundLevel extends Model {
 
   @AllowNull(false)
   @Column
-  funds!: number
+  cost!: number
 
   @HasMany(() => HealthLevel)
-  healthLevel!: HealthLevel[]
+  healthLevel!: HealthLevel
 }
