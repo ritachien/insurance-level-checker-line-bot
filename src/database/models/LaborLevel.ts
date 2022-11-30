@@ -1,7 +1,9 @@
-import { Table, Column, Model, AllowNull, CreatedAt, PrimaryKey, AutoIncrement } from "sequelize-typescript"
+import { Table, Column, Model, AllowNull, CreatedAt, PrimaryKey, ForeignKey, BelongsTo, HasMany } from 'sequelize-typescript'
+import { HealthLevel } from './healthLevel'
 
 @Table({
-  tableName: "laborLevels"
+  tableName: 'laborLevels',
+  timestamps: false
 })
 
 export class LaborLevel extends Model {
@@ -14,7 +16,6 @@ export class LaborLevel extends Model {
   @Column
   cost!: number
 
-  @CreatedAt
-  @Column
-  createdAt!: Date
+  @ForeignKey(() => HealthLevel)
+  healthInsuranceLevel!: number
 }

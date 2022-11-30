@@ -1,12 +1,12 @@
-import pino from "pino"
-import dayjs from "dayjs"
+import pino from 'pino'
+import dayjs from 'dayjs'
 
 export const logger = pino({
   transport: {
-    target: "pino-pretty",
+    target: 'pino-pretty',
   },
   base: {
     pid: false
   },
-  timestamp: () => `,"time":"${dayjs().format("YYYY-MM-DD_HH:mm:ss")}"`
+  timestamp: () => `,"time":"${dayjs().format('YYYY-MM-DD_HH:mm:ss')}"`
 })
