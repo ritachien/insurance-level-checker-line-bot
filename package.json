@@ -9,7 +9,7 @@
     "clean": "rimraf ./dist",
     "build": "yarn clean && tsc",
     "start": "node dist/server.js",
-    "seed": "ts-node src/database/seeds/seeder.ts",
+    "seed": "node dist/database/seeds/seeder.js",
     "dev": "ts-node-dev src/server.ts"
   },
   "dependencies": {
