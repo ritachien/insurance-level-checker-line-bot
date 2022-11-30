@@ -44,7 +44,7 @@ export async function searchByHealthCost(cost: number): Promise<TextMessage> {
   if (!result) {
     reply = `您輸入的代扣金額 \$${cost} 查無結果，請確認後重新查詢，或輸入「說明」查看詳細查詢資訊。`
   } else {
-    reply = `您輸入的代扣金額 \$${cost}，查詢結果為:\n👉 健保薪資級距 \$${result.level}。\n\n`
+    reply = `您輸入的代扣金額 \$${cost}，查詢結果為:\n👉 健保薪資級距 \$${result.level}。`
   }
 
   return {
