@@ -7,6 +7,7 @@ interface LaborInsuranceSettings {
 
 interface HealthInsuranceSettings {
   readonly highestLevel: number
+  readonly lowestLevel: number
   readonly costRate: number
   readonly insuranceRate: number
 }
@@ -25,6 +26,7 @@ export const laborSettings: LaborInsuranceSettings = {
 
 export const healthSetting: HealthInsuranceSettings = {
   highestLevel: 219500,
+  lowestLevel: 25250,
   costRate: 0.3,
   insuranceRate: 0.0517
 }

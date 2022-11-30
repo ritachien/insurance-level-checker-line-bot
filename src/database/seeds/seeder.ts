@@ -23,13 +23,11 @@ import {
     await sequelize.sync({ force: true })
 
     // create new data
-    await createHealthLevelSeeds(healthLevels)
     await Promise.all([
-      createLaborLevelSeed(laborlevels),
-      createLRetireFundSeeds(retireFundLevels)
+      createLaborLevels(laborlevels),
+      createLRetireFundLevels(retireFundLevels),
+      createHealthLevels(healthLevels)
     ])
-
-    process.exit()
   } catch (err) {
     logger.error(err)
   }
@@ -38,9 +36,9 @@ import {
 
 
 // function of seeders
-async function createHealthLevelSeeds(levels: number[]) {
+async function createHealthLevels(levels: number[]) {
   try {
-    healthLevels.map(async level => {
+    levels.map(async level => {
       let laborLevel, retireFundLevel
 
       level > laborSettings.highestLevel
@@ -64,14 +62,13 @@ async function createHealthLevelSeeds(levels: number[]) {
   }
 }
 
-async function createLaborLevelSeed(levels: number[]) {
+async function createLaborLevels(levels: number[]) {
   try {
     await Promise.all(
       levels.map(async level => {
         await LaborLevel.create({
           level,
-          cost: Math.round(level * laborSettings.accidentRate * laborSettings.costRate) + Math.round(level * laborSettings.jobRate * laborSettings.costRate),
-          healthInsuranceLevel: level
+          cost: Math.round(level * laborSettings.accidentRate * laborSettings.costRate) + Math.round(level * laborSettings.jobRate * laborSettings.costRate)
         })
       })
     )
@@ -81,14 +78,13 @@ async function createLaborLevelSeed(levels: number[]) {
   }
 }
 
-async function createLRetireFundSeeds(levels: number[]) {
+async function createLRetireFundLevels(levels: number[]) {
   try {
     await Promise.all(
       levels.map(async level => {
         await RetireFundLevel.create({
           level,
-          funds: Math.round(level * retireFundSettings.defaultRate),
-          healthInsuranceLevel: level
+          funds: Math.round(level * retireFundSettings.defaultRate)
         })
       })
     )

@@ -1,4 +1,4 @@
-import { Table, Column, Model, AllowNull, CreatedAt, PrimaryKey, HasOne, ForeignKey } from 'sequelize-typescript'
+import { Table, Column, Model, AllowNull, PrimaryKey, BelongsTo, ForeignKey } from 'sequelize-typescript'
 import { LaborLevel } from './laborLevel'
 import { RetireFundLevel } from './retireFundLevel'
 
@@ -17,9 +17,15 @@ export class HealthLevel extends Model {
   @Column
   cost!: number
 
-  @HasOne(() => LaborLevel)
-  laborLevel!: LaborLevel
+  @ForeignKey(() => LaborLevel)
+  laborLevel!: number
 
-  @HasOne(() => RetireFundLevel)
-  retireFundLevel!: RetireFundLevel
+  @ForeignKey(() => RetireFundLevel)
+  retireFundLevel!: number
+
+  @BelongsTo(() => LaborLevel)
+  LaborLevel!: LaborLevel
+
+  @BelongsTo(() => RetireFundLevel)
+  RetireFundLevel!: RetireFundLevel
 }

@@ -1,4 +1,4 @@
-import { Table, Column, Model, AllowNull, CreatedAt, PrimaryKey, ForeignKey, BelongsTo, HasMany } from 'sequelize-typescript'
+import { Table, Column, Model, AllowNull, PrimaryKey, HasMany } from 'sequelize-typescript'
 import { HealthLevel } from './healthLevel'
 
 @Table({
@@ -16,6 +16,6 @@ export class LaborLevel extends Model {
   @Column
   cost!: number
 
-  @ForeignKey(() => HealthLevel)
-  healthInsuranceLevel!: number
+  @HasMany(() => HealthLevel)
+  healthLevel!: HealthLevel
 }

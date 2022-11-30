@@ -6,7 +6,7 @@ import { Client, ClientConfig, WebhookEvent, MessageAPIResponseBase } from '@lin
 
 import flexMenu from '../replyMessages/flexMenu'
 import { commandRemider, joinMessage } from '../replyMessages/textMessages'
-import { searchByHealthCost, searchByLaborCost, searchByRetireFund } from './searchHandler'
+import { searchByHealthCost, searchByLaborCost, searchByRetireFund, searchBySalary } from './searchHandler'
 
 // Setup all LINE client and Express configurations.
 const clientConfig: ClientConfig = {
@@ -66,6 +66,13 @@ const eventHandler = async (event: WebhookEvent): Promise<MessageAPIResponseBase
     return await client.replyMessage(
       replyToken,
       await searchByHealthCost(Number(command[1]))
+    )
+  }
+
+  if (command[0] === '薪資') {
+    return await client.replyMessage(
+      replyToken,
+      await searchBySalary(Number(command[1]))
     )
   }
 
