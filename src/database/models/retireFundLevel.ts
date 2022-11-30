@@ -1,5 +1,5 @@
 import { Table, Column, Model, AllowNull, PrimaryKey, HasMany } from 'sequelize-typescript'
-import { HealthLevel } from './healthLevel'
+import { HealthLevel } from './HealthLevel'
 
 @Table({
   tableName: 'retireFundLevels',

@@ -1,8 +1,8 @@
 import { TextMessage } from '@line/bot-sdk'
-import { healthLevels, healthSetting } from '../config/levels.config'
-import { HealthLevel } from '../database/models/healthLevel'
-import { LaborLevel } from '../database/models/laborLevel'
-import { RetireFundLevel } from '../database/models/retireFundLevel'
+import { healthLevels } from '../config/levels.config'
+import { HealthLevel } from '../database/models/HealthLevel'
+import { LaborLevel } from '../database/models/LaborLevel'
+import { RetireFundLevel } from '../database/models/RetireFundLevel'
 import binarySearch from '../utils/binarySearch'
 
 export async function searchByLaborCost(cost: number): Promise<TextMessage> {

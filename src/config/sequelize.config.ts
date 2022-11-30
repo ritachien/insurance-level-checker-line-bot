@@ -1,8 +1,8 @@
 import { Sequelize } from 'sequelize-typescript'
-import { LaborLevel } from '../database/models/laborLevel'
+import { LaborLevel } from '../database/models/LaborLevel'
 import * as dotenv from 'dotenv'
-import { RetireFundLevel } from '../database/models/retireFundLevel'
-import { HealthLevel } from '../database/models/healthLevel'
+import { RetireFundLevel } from '../database/models/RetireFundLevel'
+import { HealthLevel } from '../database/models/HealthLevel'
 
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config()

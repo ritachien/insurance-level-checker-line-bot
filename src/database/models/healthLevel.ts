@@ -1,6 +1,6 @@
 import { Table, Column, Model, AllowNull, PrimaryKey, BelongsTo, ForeignKey } from 'sequelize-typescript'
-import { LaborLevel } from './laborLevel'
-import { RetireFundLevel } from './retireFundLevel'
+import { LaborLevel } from './LaborLevel'
+import { RetireFundLevel } from './RetireFundLevel'
 
 @Table({
   tableName: 'healthLevels',
