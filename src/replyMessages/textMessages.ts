@@ -8,5 +8,5 @@ export const joinMessage: TextMessage = {
 
 export const commandRemider: TextMessage = {
   type: 'text',
-  text: '👉 請輸入正確格式指令進行查詢，或輸入「說明」開啟指令說明清單。\n👉 本服務目前沒有提供「部分工時」資訊查詢。'
+  text: '👉 請輸入正確格式指令進行查詢，或輸入「說明」開啟指令說明清單。'
 }

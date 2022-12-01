@@ -69,8 +69,7 @@ export async function searchBySalary(salary: number): Promise<TextMessage> {
   if (!result) {
     reply = `您輸入的薪資 \$${salary} 查無結果，請確認後重新查詢，或輸入「說明」查看詳細查詢資訊。`
   } else {
-    reply = `您輸入的薪資 \$${salary}，查詢結果為:\n👉 【健保】級距 \$${result.level}，代扣金額 \$${result.cost}/名。\n👉 【勞保】級距 \$${result.LaborLevel.level}，代扣金額 \$${result.LaborLevel.cost}。\n👉 【新制退休金】級距 \$${result.RetireFundLevel.level}，代扣金額 \$${result.RetireFundLevel.funds}。\n
-    `
+    reply = `您輸入的薪資 \$${salary}，查詢結果為:\n👉 【健保】級距 \$${result.level}，代扣金額 \$${result.cost}/名。\n👉 【勞保】級距 \$${result.LaborLevel.level}，代扣金額 \$${result.LaborLevel.cost}。\n👉 【新制退休金】級距 \$${result.RetireFundLevel.level}，代扣金額 \$${result.RetireFundLevel.funds}。`
   }
 
   return {
