@@ -1,12 +1,12 @@
 # LINE Bot - 個人勞健保投保薪資及扣款金額查詢  
 * LINE BOT - **老闆幫我保多少**  
-* 可使用 QR code 或 ID (@122fskxw) 搜尋，並將機器人家為好友!!  
+* 可使用 QR code 或 ID ([@122fskxw](https://line.me/R/ti/p/@122fskxw)) 搜尋，並將機器人家為好友!!  
 
 📢 ***如果使用上發現問題或有任何建議，歡迎開 Issue 或在 Discussions 進行討論!***  
 
-|Bot Icon|Join Method|
-|:--:|:--:|
-|![line-bot-icon](./assets/line-icon.png)|![QRcode](./assets/QRcode.png)|
+|                 Bot Icon                 |          Join Method           |
+| :--------------------------------------: | :----------------------------: |
+| ![line-bot-icon](./assets/line-icon.png) | ![QRcode](./assets/QRcode.png) |
 
 ## 專案簡介  
 * 本專案僅針對台灣本國人的勞健保、新制退休金資訊查詢。  
@@ -28,7 +28,7 @@
 1. 觸發 `join event` 時(加為好友/解除封鎖)，提示歡迎訊息及 menu。  
 2. 觸發 `postback event` 時(點選 menu 選項)，提示該選項詳細說明。  
 3. 各查詢指令及回覆內容。  
-4. 錯誤題示。  
+4. 錯誤提示。  
 
 ![demo](./assets/demo.png)  
 
