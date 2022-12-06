@@ -1,6 +1,7 @@
 const binarySearch = (numArray: number[], target: number): number => {
   const middleIndex = Math.floor(numArray.length / 2) - 1
 
+  if (target === numArray[middleIndex]) return numArray[middleIndex]
   if (numArray.length === 1) return numArray[0]
 
   if (target > numArray[middleIndex]) {
