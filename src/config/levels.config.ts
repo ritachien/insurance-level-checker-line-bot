@@ -20,13 +20,13 @@ interface RetireFundSettings {
 export const laborSettings: LaborInsuranceSettings = {
   highestLevel: 45800,
   costRate: 0.2,  // 勞工負擔比率
-  accidentRate: 0.105, // 普通事故費率
+  accidentRate: 0.11, // 普通事故費率
   jobRate: 0.01  // 就業保險費率
 }
 
 export const healthSetting: HealthInsuranceSettings = {
   highestLevel: 219500,
-  lowestLevel: 25250,
+  lowestLevel: 26400,
   costRate: 0.3,
   insuranceRate: 0.0517
 }
@@ -38,7 +38,7 @@ export const retireFundSettings: RetireFundSettings = {
 
 
 export const laborlevels: number[] = [
-  25250, 26400, 27600, 28800, 30300, 31800, 33300, 34800, 36300, 38200, 40100, 42000, 43900, 45800
+  26400, 27600, 28800, 30300, 31800, 33300, 34800, 36300, 38200, 40100, 42000, 43900, 45800
 ]
 
 export const retireFundLevels: number[] = [
