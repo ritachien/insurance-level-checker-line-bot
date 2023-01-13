@@ -46,6 +46,7 @@
 * [line-bot-sdk-nodejs](https://github.com/line/line-bot-sdk-nodejs/tree/next/examples/echo-bot-ts)  
 
 ## 更新紀錄  
+* 2023/01/13 - 更新 2023 年薪資級距及費率。  
 * 2022/11/30 - 第一版本上線。  
 
 ## Author  
